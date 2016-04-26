@@ -1,19 +1,12 @@
 <?php
-try{
-$conexion = new PDO("mysql:host=localhost;dbname=academica","root","");
-$resultados = $conexion->query("select * from programa");
+include("conexion.php");
+
+$resultados = $conexion->query("select * from film");
 foreach ($resultados as $fila)
 {
-   // echo $fila["id_programa"]." ".$fila["nombre"]."</br>";
-  echo "$fila[id_programa]- $fila[nombre]</br>";
+
+  echo "$fila[film_id]- $fila[title]</br>";
 }    
 
-
-
-}
-catch(Exception $e)
-{
-    echo $e->getMessage();
-}
 
 ?>
