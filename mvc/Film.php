@@ -1,4 +1,5 @@
 <?php
+include("conexion.php");
 class Film{
    public $film_id=0;
    public $title="";
@@ -10,6 +11,7 @@ class Film{
 	 $this->description = $description;
    }
    function save(){
+	
    }
    
    function toString(){
